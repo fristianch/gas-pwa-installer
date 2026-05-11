@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Install Aplikasi</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    .btn { padding: 15px 30px; font-size: 18px; background: #4285f4; color: white; border: none; border-radius: 5px; cursor: pointer; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Klik Tombol di Bawah Untuk Memasang Shortcut Aplikasi</h1>
+  <button id="installBtn" class="btn">Pasang Aplikasi</button>
+
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          console.log('User menerima instalasi');
+        }
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+      }
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+</body>
+</html>
