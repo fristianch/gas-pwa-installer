@@ -3,25 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Install Aplikasi</title>
+  <title>Install Aplikasi GAS</title>
   <link rel="manifest" href="manifest.json">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    .btn { padding: 15px 30px; font-size: 18px; background: #4285f4; color: white; border: none; border-radius: 5px; cursor: pointer; display: none; }
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f5f5f5; }
+    .card { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .btn { padding: 15px 30px; font-size: 18px; background: #4285f4; color: white; border: none; border-radius: 5px; cursor: pointer; display: none; width: 100%; font-weight: bold; margin-top: 20px; }
+    .btn:hover { background: #357ae8; }
+    .info-text { color: #666; font-size: 14px; margin-top: 15px; }
   </style>
 </head>
 <body>
-  <h1>Klik Tombol di Bawah Untuk Memasang Shortcut Aplikasi</h1>
-  <button id="installBtn" class="btn">Pasang Aplikasi</button>
+
+  <div class="card">
+    <h2>Sistem Administrasi Biro Jasa</h2>
+    <p>Klik tombol di bawah untuk memasang shortcut aplikasi di perangkat Anda.</p>
+    <button id="installBtn" class="btn">PASANG APLIKASI</button>
+    <p id="statusText" class="info-text">Memeriksa dukungan browser...</p>
+  </div>
 
   <script>
+    // 1. MASUKKAN URL WEB APP GOOGLE APPS SCRIPT ANDA DI SINI
+    const URL_WEB_APP_GAS = "https://script.google.com/macros/s/AKfycbyWQGFvvHKVvljYFk6-js7uUbM-H7xRDH37YNT7QLGyTmDC4B8XxPPCPieCmAWXaBQ8/exec"; 
+
+    // 2. DETEKSI: Jika dibuka lewat shortcut PWA (Standalone Mirror)
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+      document.getElementById('statusText').innerText = "Membuka aplikasi...";
+      window.location.href = URL_WEB_APP_GAS;
+    }
+
     let deferredPrompt;
     const installBtn = document.getElementById('installBtn');
+    const statusText = document.getElementById('statusText');
 
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      installBtn.style.display = 'inline-block';
+      installBtn.style.display = 'block';
+      statusText.style.display = 'none';
     });
 
     installBtn.addEventListener('click', async () => {
@@ -29,10 +48,11 @@
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
-          console.log('User menerima instalasi');
+          statusText.innerText = "Aplikasi berhasil dipasang!";
+          statusText.style.display = 'block';
+          installBtn.style.display = 'none';
         }
         deferredPrompt = null;
-        installBtn.style.display = 'none';
       }
     });
 
