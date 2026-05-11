@@ -1,7 +1,6 @@
 # 📑 Sistem Administrasi Biro Jasa (GAS Edition)
 
-[![Google Apps Script](https://shields.io)](https://google.com)
-![Version](https://shields.io)
+[![Google Apps Script](https://shields.io)]([https://google.com](https://script.google.com/macros/s/AKfycbwCybSFu8ZZ5xC9Gd50dz18c6r8drgs6AoD-wasDxrR5DhlvWHuXeA6RyN6HBG5g0rbyA/exec))
 
 Aplikasi berbasis cloud untuk mengelola administrasi Biro Jasa (STNK/SIM). Sistem ini menggunakan **Google Sheets** sebagai database dan **Google Web Apps** sebagai antarmuka pengguna (UI).
 
