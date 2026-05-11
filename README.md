@@ -1,6 +1,6 @@
 # 📑 Sistem Administrasi Biro Jasa (GAS Edition)
 
-[![Google Apps Script](https://shields.io)](https://script.google.com/macros/s/AKfycbwCybSFu8ZZ5xC9Gd50dz18c6r8drgs6AoD-wasDxrR5DhlvWHuXeA6RyN6HBG5g0rbyA/exec)
+[![Google Apps Script](https://shields.io)](https://script.google.com/macros/s/AKfycbyWQGFvvHKVvljYFk6-js7uUbM-H7xRDH37YNT7QLGyTmDC4B8XxPPCPieCmAWXaBQ8/exec)
 
 Aplikasi manajemen operasional Biro Jasa berbasis Google Apps Script. Sistem ini dirancang untuk mempermudah pengelolaan data STNK, SIM, dan BPKB secara online dan terpusat.
 
