@@ -1,0 +1,15 @@
+{
+  "name": "Aplikasi Administrasi CV Pribadi dan Keluarga",
+  "short_name": "CV Pribadi dan Keluarga",
+  "start_url": "https://script.google.com/macros/s/AKfycbyWQGFvvHKVvljYFk6-js7uUbM-H7xRDH37YNT7QLGyTmDC4B8XxPPCPieCmAWXaBQ8/exec",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
