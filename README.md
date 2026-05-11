@@ -6,7 +6,7 @@ Aplikasi manajemen operasional Biro Jasa berbasis Google Apps Script. Sistem ini
 
 ## 🔗 Link Aplikasi (Web App)
 Aplikasi dapat diakses langsung melalui tautan berikut:
-👉 **[Buka Aplikasi Administrasi Biro Jasa](https://script.google.com/macros/s/AKfycbwCybSFu8ZZ5xC9Gd50dz18c6r8drgs6AoD-wasDxrR5DhlvWHuXeA6RyN6HBG5g0rbyA/exec)**
+👉 **[Buka Aplikasi Administrasi Biro Jasa](https://script.google.com/macros/s/AKfycbyWQGFvvHKVvljYFk6-js7uUbM-H7xRDH37YNT7QLGyTmDC4B8XxPPCPieCmAWXaBQ8/exec)**
 
 ## 🚀 Fitur Utama
 *   **Database Terintegrasi:** Penyimpanan data aman menggunakan Google Sheets.
