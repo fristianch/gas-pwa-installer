@@ -1,7 +1,7 @@
 {
-  "name": "Aplikasi Administrasi CV Pribadi dan Keluarga",
-  "short_name": "CV Pribadi dan Keluarga",
-  "start_url": "https://script.google.com/macros/s/AKfycbyWQGFvvHKVvljYFk6-js7uUbM-H7xRDH37YNT7QLGyTmDC4B8XxPPCPieCmAWXaBQ8/exec",
+  "name": "Sistem Administrasi Biro Jasa",
+  "short_name": "Biro Jasa App",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4285f4",
